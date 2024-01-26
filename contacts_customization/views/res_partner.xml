@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Inherit res.partner form view -->
+        <record id="view_partner_form_inherit_customization" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit res.partner form view -->
+        <record id="view_partner_form_ag_field_service_inherit_customization" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id"
+                ref="ag_field_service.view_partner_form_inherit_ag_field_service" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='deposit_history']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='expense_history']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='meter_reading']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_exit']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='appartment_status']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='residence_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='flat_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='block']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='flat_no']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='intercom_no']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='resident_commencement_date']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='resident_end_date']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+            </field>
+        </record>
+
+        <!-- Hide Menu Items -->
+        <record id="ag_field_service.menu_flat_type" model="ir.ui.menu">
+            <field name="active">False</field>
+        </record>
+
+        <record id="ag_field_service.menu_action_cost_configuration" model="ir.ui.menu">
+            <field name="active">False</field>
+        </record>
+
+    </data>
+</odoo>

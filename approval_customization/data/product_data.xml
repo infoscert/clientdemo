@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record id="refundable_deposit" model="product.template">
+        <field name="name">Refundable Deposit</field>
+        <field name="list_price">0.0</field>
+        <field name="type">service</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="service_policy">ordered_prepaid</field>
+    </record>
+</odoo>
